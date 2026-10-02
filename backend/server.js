@@ -4,6 +4,7 @@ const cors = require("cors");
 const db = require("./config/db");
 const memberRoute = require("./routes/memberRoute");
 const traineeRoute = require("./routes/traineeRoute");
+const classRoute = require("./routes/classRoute");
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.get("/test-db", (req, res) => {
 
 app.use("/api/member", memberRoute);
 app.use("/api/trainee", traineeRoute);
+app.use("/api/class",classRoute);
 
 const PORT = 5000;
 
